@@ -14,6 +14,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 //test push
+//character criteria
 function generatePassword() {
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var lowerCase = "abcdefghijklmnopqrstuvwxyz";
@@ -30,6 +31,7 @@ function generatePassword() {
   if (!upperYes && !lowerYes && !numberYes && !symbolsYes) {
     return "Invalid selection, must choose at least one.";
   }
+  //confirmed selections area
   var confirmedSelections = [];
   if (upperYes) {
     confirmedSelections += upperCase;
@@ -44,6 +46,8 @@ function generatePassword() {
     confirmedSelections += symbols;
   }
   console.log(confirmedSelections);
+
+  //for loops
   var password = "";
   for (var i = 0; i < passwordLength; i++) {
     var index = Math.floor(Math.random() * confirmedSelections.length);

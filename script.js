@@ -44,4 +44,10 @@ function generatePassword() {
     confirmedSelections += symbols;
   }
   console.log(confirmedSelections);
+  var password = "";
+  for (var i = 0; i < passwordLength; i++) {
+    var index = Math.floor(Math.random() * confirmedSelections.length);
+    password += confirmedSelections[index];
+  }
+  console.log(password);
 }

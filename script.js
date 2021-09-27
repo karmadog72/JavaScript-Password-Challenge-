@@ -23,4 +23,11 @@ function generatePassword() {
   if (passwordLength < 8 || passwordLength > 128 || isNaN(passwordLength)) {
     return "Invalid password length. Please enter valid password between 8-128 characters";
   }
+  var upperYes = confirm("Uppercase letter confirmed"); // true or false
+  var lowerYes = confirm("Lower case letter confirmed");
+  var numberYes = confirm("Number confirmed");
+  var symbolsYes = confirm("symbols confirmed");
+  if (!upperYes && !lowerYes && !numberYes && !symbolsYes) {
+    return "Invalid selection, must choose at least one.";
+  }
 }

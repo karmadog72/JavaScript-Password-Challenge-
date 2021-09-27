@@ -30,4 +30,18 @@ function generatePassword() {
   if (!upperYes && !lowerYes && !numberYes && !symbolsYes) {
     return "Invalid selection, must choose at least one.";
   }
+  var confirmedSelections = [];
+  if (upperYes) {
+    confirmedSelections += upperCase;
+  }
+  if (lowerYes) {
+    confirmedSelections += lowerCase;
+  }
+  if (numberYes) {
+    confirmedSelections += number;
+  }
+  if (symbolsYes) {
+    confirmedSelections += symbols;
+  }
+  console.log(confirmedSelections);
 }

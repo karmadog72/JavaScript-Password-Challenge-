@@ -50,4 +50,5 @@ function generatePassword() {
     password += confirmedSelections[index];
   }
   console.log(password);
+  return password;
 }
